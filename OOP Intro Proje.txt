@@ -1,0 +1,36 @@
+1# Kullanýcýlar kullanýcý adý ve þifre girerek sisteme giriþ yapacaklar.
+	1.1# Kullanýcýlarýn yanlýþ bilgi girmesi sisteme giriþlerini engelleyecek.
+	1.2# Kullanýcýlar iki role ayrýlacak --> (Üye/Admin).
+	1.3# Sisteme kayýt yapýlabilecek fakat kayýt olunduðunda rol ancak "Üye" olabilecek.
+
+2# Giriþ ekraný geçilirse iki role göre farklýlýk gösteren ekranlar gelecek
+	
+	2.1# *Üye:
+
+		2.1.1# Karþýsýnda hareket edebileceði 3 yer olacak: "Randevu Al", "Randevularý Gör", "Çýkýþ Yap"
+		2.1.2#
+		"Randevu Al": Kullanýcý; isim, soyisim, rahatsýzlýðýnýn bir özetini, tedavi almak istediði doktoru ve tarihini dolduracaðý bir form olacak. Form hiçbir alan boþ geçilmeden doldurulduktan sonra kayýt alýnacak (bonus: kullanýcý bugünün tarihinden önceki bir tarihi seçememeli)
+
+		"Randevularý Gör": Kullanýcý, daha önceden aldýðý ve yeni oluþturmuþ olduðu randevu bilgilerini görebilecek (!)
+
+		"Çýkýþ Yap": Kullanýcýyý sistemden çýkaracak
+	
+	2.2# *Admin:
+
+		2.2.1# Karþýsýnda hareket edebileceði 3 yer olacak: "Tüm Randevularý Gör", "Doktor Ekle", "Çýkýþ Yap"
+
+		2.2.2#
+		"Tüm Randevularý Gör": Sistemde var olan bütün randevularý görebilecek
+
+		"Doktor Ekle": Yeni bir doktor ekleyebilecek
+
+		"Çýkýþ Yap": Sistemden çýkýþ yapacak 
+
+NOTLAR:
+-OOP kurallarýna olabildiðince uyunuz
+-Modellerini oluþtururken oluþan objelerin birbirinden ayýrt edilebilmesi için ayýrt edici bir mekanizma gerekli
+-Kayýt olarak anýlan iþlemler List<T> ya da array içerisinde tutulabilir (program kapatýldýðýnda gideceklerdir)
+-Menüler üzerinde yürütülecek olan iþlemlerin her birisinin (Çýkýþ Yap hariç) kendisine adanmýþ bir form'u olmalý
+-Randevularý vs. göstermek için "ListView" araþtýrýlarak kullanýlabilir (zorunlu deðil)
+-Randevuya týklandýðýnda detayýný göstersin (ListView kullanýrsanýz)
+	
